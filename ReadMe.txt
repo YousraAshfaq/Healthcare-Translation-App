@@ -16,8 +16,8 @@ A **real-time, multilingual translation web app** designed to help **patients an
 ## **🛠️ Technologies Used**
 - **Frontend:** HTML, CSS, JavaScript  
 - **Backend:** Python (Flask)  
-- **Database:** SQLite  
-- **Translation API:** LibreTranslate (Self-hosted)  
+- **Database:** PostgreSQL 
+- **Translation API:** MyMemory  
 - **Speech-to-Text API:** Web Speech API  
 - **Text-to-Speech API:** Web Speech API  
 
@@ -29,24 +29,8 @@ Make sure you have **Python 3** installed. Then, install the required dependenci
 ```sh
 pip install flask 
 pip install flask-cors
-pip install sqlite3
 pip install requests
-pip install libretranslate
 
-2️⃣ Run LibreTranslate Locally
-Instead of using an external API, we will run LibreTranslate on our system.
-
-Option 1: Using Docker
-If you have Docker installed, run:
-
-sh
-Copy
-Edit
-docker run -p 5001:5000 libretranslate/libretranslate
-
-Option 2: Without Docker (Direct Install)
-libretranslate --host 0.0.0.0 --port 5001
-📌 This starts LibreTranslate locally at http://localhost:5001.
 
 
 📌 Running the Application
