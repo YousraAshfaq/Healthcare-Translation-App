@@ -2,6 +2,7 @@ async function translateText() {
     const text = document.getElementById("transcript").value;
     const targetLang = document.getElementById("output-lang").value.toLowerCase(); // Convert to lowercase
 
+
     if (!text) {
         alert("Please enter text to translate.");
         return;
@@ -10,7 +11,7 @@ async function translateText() {
     console.log("📢 Sending translation request:", { text, targetLang }); // Debugging log
 
     try {
-        const response = await fetch("http://127.0.0.1:5002/translate", {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app/translate", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ text, targetLang })
@@ -58,7 +59,7 @@ async function loginUser() {
     const password = document.getElementById("login-password").value;
 
     try {
-        const response = await fetch("http://127.0.0.1:5002/login", {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app//login", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
@@ -87,7 +88,7 @@ async function registerUser() {
     }
 
     try {
-        const response = await fetch("http://127.0.0.1:5002/register", {
+        const response = await fetch("https://healthcare-translation-app-backe-production.up.railway.app//register", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ name, email, password })
